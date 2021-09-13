@@ -18,6 +18,7 @@ public class aquecimentoEx01M2 {
 
         int menuPrincipal = 0;
 
+
         while (menuPrincipal != 4) {
             //menu
             System.out.println("***** Mercado Real *****");
@@ -43,17 +44,38 @@ public class aquecimentoEx01M2 {
                     Double precoProducto = leitor.nextDouble();
 
                     //Cadastro
-                        productos.put(nomeProduto, precoProducto);
-                        System.out.println("cadastrado com suceso");
-                break;
+                    productos.put(nomeProduto, precoProducto);
+                    System.out.println("cadastrado com suceso");
+                    break;
                 case 2:
-                    for (String referencia: productos.keySet()) {
-                        System.out.println(referencia + "\t" +productos.get(referencia));
+                    if (productos.isEmpty()) {
+                        System.out.println("Não tem elementos cadastrados");
+                    } else {
+                        for (String referencia : productos.keySet()) {
+                            System.out.println(referencia + "\t" + productos.get(referencia));
+                        }
                     }
-                break;
+                    break;
+                case 3:
+
+                    if (productos.isEmpty()) {
+                        System.out.println("Não tem produtos cadastrados");
+
+                    } else {
+                        System.out.println("Digite o produto a excluir: ");
+                        String excluir = leitor.nextLine();
+                        if (productos.containsKey(excluir)) {
+                            productos.remove(excluir);
+                            System.out.println(excluir+" Foi excluido com sucesso");
+                        }else{
+                        System.out.println("************  Digite um nome valido  ************");
+                        }
+                    }
+                    break;
                 case 4:
-                    System.out.println("Vuelva Siempre");
-                menuPrincipal = 4;
+                    System.out.println("Volte Sempre");
+                    menuPrincipal = 4;
+                    break;
 
                 default:
                     System.out.println("Digite uma opção valida");
