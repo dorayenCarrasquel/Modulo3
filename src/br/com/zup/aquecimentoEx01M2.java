@@ -35,9 +35,7 @@ public class aquecimentoEx01M2 {
                 case 1:
                     //Entrada de dados
                     System.out.println("[1] Cadastro de produtos");
-//                    System.out.println("Quantos produtos desea cadastrar");
-//                    int cadastro = leitor.nextInt();
-//                    leitor.nextLine();
+
                     System.out.println("Indique o nome do produto");
                     String nomeProduto = leitor.nextLine();
                     System.out.println("Indique o valor do produto");
