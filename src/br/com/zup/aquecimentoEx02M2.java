@@ -13,7 +13,27 @@ public class aquecimentoEx02M2 {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         Map<Integer, Double> candidatos = new HashMap<Integer,Double>();
+        boolean chave = true;
+        do {
+            System.out.println("********** VESTIBULAR ********** ");
+            System.out.println("[1] Adicionar Candidato");
+            System.out.println("[2] Exibir Lista de Candidatos");
+            System.out.println("[3] Excluir Candidato");
+            System.out.println("[4] Saida");
+            System.out.println("Marque uma opção: ");
+            int opcao = leitor.nextInt();
 
+            if ()
+            System.out.println("********** Candidatos Vestibular  **********" );
+            System.out.println("Digite Código da Matrícula");
+            int codigoMatricula = leitor.nextInt();
+            System.out.println("Digite a nota alcanzada no Vestibular do candidato "+codigoMatricula);
+            double notaVestivular = leitor.nextDouble();
+            //Registrar
+            candidatos.put(codigoMatricula,notaVestivular);
+
+            while (chave == true);
+        }
 
     }
 }
